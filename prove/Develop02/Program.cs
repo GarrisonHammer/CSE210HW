@@ -1,3 +1,6 @@
+//For adding creativity and adding more to the project I added a location that will be added to each journal entry.
+
+
 using System;
 using System.Collections.Generic;
 using System.IO;
