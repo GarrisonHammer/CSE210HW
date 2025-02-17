@@ -1,25 +1,31 @@
 // This class represents an individual word in the scripture
 class Word
 {
-    public string Text { get; private set; } // Stores the word text
-    public bool IsHidden { get; private set; } // Tracks if the word is hidden
+    private string _text; // Private member variable for word text
+    private bool _isHidden; // Private flag to track if the word is hidden
 
     // Constructor initializes the word with its text and sets it as visible
     public Word(string text)
     {
-        Text = text;
-        IsHidden = false; // Initially, words are visible
+        _text = text;
+        _isHidden = false; // Words start as visible
     }
 
-    // Hides the word by setting IsHidden to true
+    // Public method to hide the word (Encapsulation: controls modification)
     public void Hide()
     {
-        IsHidden = true;
+        _isHidden = true;
+    }
+
+    // Public method to check if the word is hidden
+    public bool IsHidden()
+    {
+        return _isHidden;
     }
 
     // Returns the word text if visible, otherwise returns blank spaces
     public override string ToString()
     {
-        return IsHidden ? "_____" : Text;
+        return _isHidden ? "_____" : _text;
     }
 }

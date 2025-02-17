@@ -1,11 +1,17 @@
 // This class represents the reference of the scripture (e.g., "John 3:16")
 class Reference
 {
-    public string Text { get; private set; } // Stores the scripture reference
+    private string _text; // Private member variable for scripture reference
 
     // Constructor initializes the reference text
     public Reference(string text)
     {
-        Text = text;
+        _text = text;
+    }
+
+    // Public method to return the reference text (Encapsulation: prevents direct access)
+    public string GetText()
+    {
+        return _text;
     }
 }

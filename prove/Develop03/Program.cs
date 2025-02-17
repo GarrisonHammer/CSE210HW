@@ -1,6 +1,7 @@
+//to add creativity I add a section that allows the user to
+//choose how many words they hide per iteration of the program 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 class Program
 {
@@ -15,10 +16,10 @@ class Program
         string textInput = Console.ReadLine()?.Trim();
 
         // Create a Reference object to store the scripture reference
-        Reference reference = new Reference(referenceInput);
+        Reference scriptureReference = new Reference(referenceInput);
 
-        // Create a Scripture object to store the words and manage hiding functionality
-        Scripture scripture = new Scripture(reference, textInput);
+        // Create a Scripture object to store words and manage hiding functionality
+        Scripture scripture = new Scripture(scriptureReference, textInput);
 
         // Ask the user how many words they want to hide per round
         Console.WriteLine("How many words would you like to hide each round?");
