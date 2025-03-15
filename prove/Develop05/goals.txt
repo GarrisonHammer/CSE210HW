@@ -1,0 +1,4 @@
+265
+Simple|temple|100|True
+Eternal|read|15
+Checklist|exercise|10|5|100|5

@@ -1,9 +1,13 @@
+//added functionaility to the GoalManager class that allows the user to level up every 1000 points 
+
 using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello Develop05 World!");
+        // Create an instance of GoalManager and start the program loop
+        GoalManager goalManager = new GoalManager();
+        goalManager.Start();
     }
 }
