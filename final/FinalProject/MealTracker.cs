@@ -3,16 +3,20 @@ using System;
 class MealTracker : TrackerBase
 {
     public int MealsLogged { get; private set; }
+    public int TotalCalories { get; private set; }
 
     public override void LogEntry()
     {
-        Console.WriteLine("Meal logged successfully!");
+        Console.Write("Enter the number of calories for this meal: ");
+        int calories = int.Parse(Console.ReadLine());
+        TotalCalories += calories;
         MealsLogged++;
-        LogEntries.Add($"Meal {MealsLogged} logged on {DateTime.Now}");
+        LogEntries.Add($"Meal {MealsLogged}: {calories} calories logged on {DateTime.Now}");
     }
 
-    public void SetProgress(int value)
+    public void SetProgress(int meals, int totalCalories)
     {
-        MealsLogged = value;
+        MealsLogged = meals;
+        TotalCalories = totalCalories;
     }
 }

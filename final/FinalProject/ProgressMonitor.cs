@@ -18,9 +18,9 @@ class ProgressMonitor
     public void DisplayProgress()
     {
         Console.WriteLine($"=== Progress for {user.Name} ===");
-        Console.WriteLine($"Workouts Completed: {workouts.WorkoutsCompleted}");
-        Console.WriteLine($"Meals Logged: {meals.MealsLogged}");
-        Console.WriteLine($"Water Intake: {water.WaterIntake}");
+        Console.WriteLine($"Workouts Completed: {workouts.WorkoutsCompleted} (Last: {workouts.LastExerciseType})");
+        Console.WriteLine($"Meals Logged: {meals.MealsLogged}, Total Calories: {meals.TotalCalories}");
+        Console.WriteLine($"Water Intake: {water.WaterIntake} times, Total Water Consumed: {water.TotalWaterML} mL");
         Console.ReadLine();
     }
 }

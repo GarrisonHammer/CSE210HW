@@ -16,8 +16,7 @@ class UserProfile
     public void SetUserProfile()
     {
         Console.Write("Enter your age: ");
-        
-        
+        Age = int.Parse(Console.ReadLine());
 
         Console.Write("Enter your weight (kg): ");
         Weight = double.Parse(Console.ReadLine());
