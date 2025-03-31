@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+// Abstract base class for tracking different activities
 abstract class TrackerBase
 {
     protected List<string> LogEntries = new List<string>();

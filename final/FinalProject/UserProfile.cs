@@ -15,6 +15,7 @@ class UserProfile
 
     public void SetUserProfile()
     {
+        // Gather user profile details
         Console.Write("Enter your age: ");
         Age = int.Parse(Console.ReadLine());
 
